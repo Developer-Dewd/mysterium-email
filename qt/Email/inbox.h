@@ -15,6 +15,9 @@ public:
     explicit Inbox(QWidget *parent = nullptr);
     ~Inbox();
 
+private slots:
+    void on_pushButton_clicked();
+
 private:
     Ui::Inbox *ui;
 };

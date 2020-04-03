@@ -12,18 +12,28 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
+#include <QtWidgets/QListWidget>
+#include <QtWidgets/QPushButton>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_Inbox
 {
 public:
+    QPushButton *pushButton;
+    QListWidget *listWidget;
 
     void setupUi(QDialog *Inbox)
     {
         if (Inbox->objectName().isEmpty())
             Inbox->setObjectName(QString::fromUtf8("Inbox"));
         Inbox->resize(932, 622);
+        pushButton = new QPushButton(Inbox);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setGeometry(QRect(610, 140, 121, 101));
+        listWidget = new QListWidget(Inbox);
+        listWidget->setObjectName(QString::fromUtf8("listWidget"));
+        listWidget->setGeometry(QRect(0, 210, 256, 192));
 
         retranslateUi(Inbox);
 
@@ -33,6 +43,7 @@ public:
     void retranslateUi(QDialog *Inbox)
     {
         Inbox->setWindowTitle(QCoreApplication::translate("Inbox", "Dialog", nullptr));
+        pushButton->setText(QCoreApplication::translate("Inbox", "New Email", nullptr));
     } // retranslateUi
 
 };

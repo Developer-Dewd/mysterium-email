@@ -23,3 +23,4 @@ void MainWindow::on_pushButton_clicked()
     inboxDialog.setModal(true);
     inboxDialog.exec();
 }
+
