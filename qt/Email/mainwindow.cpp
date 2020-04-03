@@ -17,6 +17,8 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
+    //this->setVisible(false);
+    this->close();
     Inbox inboxDialog;
     inboxDialog.setModal(true);
     inboxDialog.exec();
