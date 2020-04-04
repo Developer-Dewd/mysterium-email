@@ -45,8 +45,8 @@
    <widget class="QProgressBar" name="progressBar">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>500</y>
+      <x>330</x>
+      <y>410</y>
       <width>118</width>
       <height>23</height>
      </rect>
@@ -142,5 +142,22 @@
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>progressBar</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>progressBar</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>330</x>
+     <y>457</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>447</x>
+     <y>441</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

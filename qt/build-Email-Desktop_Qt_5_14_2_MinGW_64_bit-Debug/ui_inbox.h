@@ -40,7 +40,7 @@ public:
         page->setObjectName(QString::fromUtf8("page"));
         pushButton = new QPushButton(page);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(220, 150, 121, 101));
+        pushButton->setGeometry(QRect(790, 510, 121, 101));
         mdiArea = new QMdiArea(page);
         mdiArea->setObjectName(QString::fromUtf8("mdiArea"));
         mdiArea->setGeometry(QRect(60, 410, 200, 160));

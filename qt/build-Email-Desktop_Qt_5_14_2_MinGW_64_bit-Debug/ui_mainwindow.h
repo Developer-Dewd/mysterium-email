@@ -51,7 +51,7 @@ public:
         TopRightLogo->setWordWrap(false);
         progressBar = new QProgressBar(centralwidget);
         progressBar->setObjectName(QString::fromUtf8("progressBar"));
-        progressBar->setGeometry(QRect(340, 500, 118, 23));
+        progressBar->setGeometry(QRect(330, 410, 118, 23));
         progressBar->setValue(24);
         TRLText = new QLabel(centralwidget);
         TRLText->setObjectName(QString::fromUtf8("TRLText"));
@@ -86,6 +86,7 @@ public:
         MainWindow->setStatusBar(statusbar);
 
         retranslateUi(MainWindow);
+        QObject::connect(progressBar, SIGNAL(valueChanged(int)), progressBar, SLOT(setValue(int)));
 
         QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi
