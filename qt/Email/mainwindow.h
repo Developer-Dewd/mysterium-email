@@ -9,16 +9,16 @@ QT_END_NAMESPACE
 
 class MainWindow : public QMainWindow
 {
-    Q_OBJECT
+    Q_OBJECT //For signals and slots in the widget
 
 public:
     MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
+    ~MainWindow(); //ptr destructor
 
 private slots:
     void on_pushButton_clicked();
 
 private:
-    Ui::MainWindow *ui;
+    Ui::MainWindow *ui; //Object to access widgets
 };
 #endif // MAINWINDOW_H

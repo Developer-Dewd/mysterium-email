@@ -12,28 +12,42 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
-#include <QtWidgets/QListWidget>
+#include <QtWidgets/QMdiArea>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QStackedWidget>
+#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_Inbox
 {
 public:
+    QStackedWidget *stackedWidget;
+    QWidget *page;
     QPushButton *pushButton;
-    QListWidget *listWidget;
+    QMdiArea *mdiArea;
+    QWidget *page_2;
 
     void setupUi(QDialog *Inbox)
     {
         if (Inbox->objectName().isEmpty())
             Inbox->setObjectName(QString::fromUtf8("Inbox"));
         Inbox->resize(932, 622);
-        pushButton = new QPushButton(Inbox);
+        stackedWidget = new QStackedWidget(Inbox);
+        stackedWidget->setObjectName(QString::fromUtf8("stackedWidget"));
+        stackedWidget->setGeometry(QRect(19, -1, 921, 621));
+        page = new QWidget();
+        page->setObjectName(QString::fromUtf8("page"));
+        pushButton = new QPushButton(page);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(610, 140, 121, 101));
-        listWidget = new QListWidget(Inbox);
-        listWidget->setObjectName(QString::fromUtf8("listWidget"));
-        listWidget->setGeometry(QRect(0, 210, 256, 192));
+        pushButton->setGeometry(QRect(220, 150, 121, 101));
+        mdiArea = new QMdiArea(page);
+        mdiArea->setObjectName(QString::fromUtf8("mdiArea"));
+        mdiArea->setGeometry(QRect(60, 410, 200, 160));
+        stackedWidget->addWidget(page);
+        page_2 = new QWidget();
+        page_2->setObjectName(QString::fromUtf8("page_2"));
+        stackedWidget->addWidget(page_2);
 
         retranslateUi(Inbox);
 

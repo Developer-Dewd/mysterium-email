@@ -6,12 +6,12 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
-    ui->setupUi(this);
+    ui->setupUi(this);//Opens the window
 }
 
 MainWindow::~MainWindow()
 {
-    delete ui;
+    delete ui; //Memory managment, destructor deletes widget object once finished
 }
 
 

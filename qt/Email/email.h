@@ -15,6 +15,11 @@ public:
     explicit Email(QWidget *parent = nullptr);
     ~Email();
 
+private slots:
+    void on_SendButton_clicked();
+
+    void on_SaveDraftButton_clicked();
+
 private:
     Ui::Email *ui;
 };
