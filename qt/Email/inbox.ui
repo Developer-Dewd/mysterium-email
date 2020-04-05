@@ -16,8 +16,8 @@
   <widget class="QStackedWidget" name="stackedWidget">
    <property name="geometry">
     <rect>
-     <x>19</x>
-     <y>-1</y>
+     <x>20</x>
+     <y>10</y>
      <width>921</width>
      <height>621</height>
     </rect>
@@ -36,15 +36,62 @@
       <string>New Email</string>
      </property>
     </widget>
-    <widget class="QMdiArea" name="mdiArea">
+    <widget class="QGroupBox" name="groupBox">
      <property name="geometry">
       <rect>
-       <x>60</x>
-       <y>410</y>
-       <width>200</width>
-       <height>160</height>
+       <x>230</x>
+       <y>120</y>
+       <width>321</width>
+       <height>191</height>
       </rect>
      </property>
+     <property name="title">
+      <string>Sign in</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QLabel" name="WalletIDLabel">
+          <property name="text">
+           <string>Wallet ID:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="WalletIDLineEdit"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLabel" name="PasswordLabel">
+          <property name="text">
+           <string>Password:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="PasswordLineEdit"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QPushButton" name="LoginButton">
+        <property name="text">
+         <string>Login</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="SeedPhraseButton">
+        <property name="text">
+         <string>Seed Phrase</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </widget>
    </widget>
    <widget class="QWidget" name="page_2"/>

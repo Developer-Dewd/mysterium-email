@@ -16,6 +16,8 @@
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QTextEdit>
+#include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
@@ -23,13 +25,19 @@ class Ui_Email
 {
 public:
     QPushButton *SendButton;
-    QLabel *To;
-    QLabel *From;
     QTextEdit *textEdit;
-    QLineEdit *ToInput;
-    QLineEdit *FromInput;
     QPushButton *SaveDraftButton;
     QLabel *label;
+    QWidget *widget;
+    QVBoxLayout *verticalLayout;
+    QLineEdit *ToInput;
+    QLineEdit *FromInput;
+    QLineEdit *SubjectInput;
+    QWidget *widget1;
+    QVBoxLayout *verticalLayout_2;
+    QLabel *To;
+    QLabel *From;
+    QLabel *Subject;
 
     void setupUi(QDialog *Email)
     {
@@ -42,25 +50,9 @@ public:
         QFont font;
         font.setPointSize(10);
         SendButton->setFont(font);
-        To = new QLabel(Email);
-        To->setObjectName(QString::fromUtf8("To"));
-        To->setGeometry(QRect(30, 30, 31, 21));
-        QFont font1;
-        font1.setPointSize(12);
-        To->setFont(font1);
-        From = new QLabel(Email);
-        From->setObjectName(QString::fromUtf8("From"));
-        From->setGeometry(QRect(30, 80, 55, 16));
-        From->setFont(font1);
         textEdit = new QTextEdit(Email);
         textEdit->setObjectName(QString::fromUtf8("textEdit"));
         textEdit->setGeometry(QRect(13, 146, 781, 321));
-        ToInput = new QLineEdit(Email);
-        ToInput->setObjectName(QString::fromUtf8("ToInput"));
-        ToInput->setGeometry(QRect(120, 30, 621, 22));
-        FromInput = new QLineEdit(Email);
-        FromInput->setObjectName(QString::fromUtf8("FromInput"));
-        FromInput->setGeometry(QRect(120, 80, 621, 22));
         SaveDraftButton = new QPushButton(Email);
         SaveDraftButton->setObjectName(QString::fromUtf8("SaveDraftButton"));
         SaveDraftButton->setGeometry(QRect(272, 487, 121, 51));
@@ -69,6 +61,53 @@ public:
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(360, 545, 91, 31));
         label->setAutoFillBackground(true);
+        widget = new QWidget(Email);
+        widget->setObjectName(QString::fromUtf8("widget"));
+        widget->setGeometry(QRect(120, 30, 651, 82));
+        verticalLayout = new QVBoxLayout(widget);
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        ToInput = new QLineEdit(widget);
+        ToInput->setObjectName(QString::fromUtf8("ToInput"));
+
+        verticalLayout->addWidget(ToInput);
+
+        FromInput = new QLineEdit(widget);
+        FromInput->setObjectName(QString::fromUtf8("FromInput"));
+
+        verticalLayout->addWidget(FromInput);
+
+        SubjectInput = new QLineEdit(widget);
+        SubjectInput->setObjectName(QString::fromUtf8("SubjectInput"));
+
+        verticalLayout->addWidget(SubjectInput);
+
+        widget1 = new QWidget(Email);
+        widget1->setObjectName(QString::fromUtf8("widget1"));
+        widget1->setGeometry(QRect(30, 30, 75, 81));
+        verticalLayout_2 = new QVBoxLayout(widget1);
+        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
+        verticalLayout_2->setContentsMargins(0, 0, 0, 0);
+        To = new QLabel(widget1);
+        To->setObjectName(QString::fromUtf8("To"));
+        QFont font1;
+        font1.setPointSize(12);
+        To->setFont(font1);
+
+        verticalLayout_2->addWidget(To);
+
+        From = new QLabel(widget1);
+        From->setObjectName(QString::fromUtf8("From"));
+        From->setFont(font1);
+
+        verticalLayout_2->addWidget(From);
+
+        Subject = new QLabel(widget1);
+        Subject->setObjectName(QString::fromUtf8("Subject"));
+        Subject->setFont(font1);
+
+        verticalLayout_2->addWidget(Subject);
+
 
         retranslateUi(Email);
 
@@ -79,10 +118,11 @@ public:
     {
         Email->setWindowTitle(QCoreApplication::translate("Email", "Dialog", nullptr));
         SendButton->setText(QCoreApplication::translate("Email", "Send", nullptr));
-        To->setText(QCoreApplication::translate("Email", "To:", nullptr));
-        From->setText(QCoreApplication::translate("Email", "From:", nullptr));
         SaveDraftButton->setText(QCoreApplication::translate("Email", "Save Draft", nullptr));
         label->setText(QString());
+        To->setText(QCoreApplication::translate("Email", "To:", nullptr));
+        From->setText(QCoreApplication::translate("Email", "From:", nullptr));
+        Subject->setText(QCoreApplication::translate("Email", "Subject:", nullptr));
     } // retranslateUi
 
 };

@@ -12,9 +12,13 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
-#include <QtWidgets/QMdiArea>
+#include <QtWidgets/QGroupBox>
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStackedWidget>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -25,7 +29,16 @@ public:
     QStackedWidget *stackedWidget;
     QWidget *page;
     QPushButton *pushButton;
-    QMdiArea *mdiArea;
+    QGroupBox *groupBox;
+    QVBoxLayout *verticalLayout;
+    QHBoxLayout *horizontalLayout;
+    QLabel *WalletIDLabel;
+    QLineEdit *WalletIDLineEdit;
+    QHBoxLayout *horizontalLayout_2;
+    QLabel *PasswordLabel;
+    QLineEdit *PasswordLineEdit;
+    QPushButton *LoginButton;
+    QPushButton *SeedPhraseButton;
     QWidget *page_2;
 
     void setupUi(QDialog *Inbox)
@@ -35,15 +48,57 @@ public:
         Inbox->resize(932, 622);
         stackedWidget = new QStackedWidget(Inbox);
         stackedWidget->setObjectName(QString::fromUtf8("stackedWidget"));
-        stackedWidget->setGeometry(QRect(19, -1, 921, 621));
+        stackedWidget->setGeometry(QRect(20, 10, 921, 621));
         page = new QWidget();
         page->setObjectName(QString::fromUtf8("page"));
         pushButton = new QPushButton(page);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
         pushButton->setGeometry(QRect(790, 510, 121, 101));
-        mdiArea = new QMdiArea(page);
-        mdiArea->setObjectName(QString::fromUtf8("mdiArea"));
-        mdiArea->setGeometry(QRect(60, 410, 200, 160));
+        groupBox = new QGroupBox(page);
+        groupBox->setObjectName(QString::fromUtf8("groupBox"));
+        groupBox->setGeometry(QRect(230, 120, 321, 191));
+        verticalLayout = new QVBoxLayout(groupBox);
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        WalletIDLabel = new QLabel(groupBox);
+        WalletIDLabel->setObjectName(QString::fromUtf8("WalletIDLabel"));
+
+        horizontalLayout->addWidget(WalletIDLabel);
+
+        WalletIDLineEdit = new QLineEdit(groupBox);
+        WalletIDLineEdit->setObjectName(QString::fromUtf8("WalletIDLineEdit"));
+
+        horizontalLayout->addWidget(WalletIDLineEdit);
+
+
+        verticalLayout->addLayout(horizontalLayout);
+
+        horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
+        PasswordLabel = new QLabel(groupBox);
+        PasswordLabel->setObjectName(QString::fromUtf8("PasswordLabel"));
+
+        horizontalLayout_2->addWidget(PasswordLabel);
+
+        PasswordLineEdit = new QLineEdit(groupBox);
+        PasswordLineEdit->setObjectName(QString::fromUtf8("PasswordLineEdit"));
+
+        horizontalLayout_2->addWidget(PasswordLineEdit);
+
+
+        verticalLayout->addLayout(horizontalLayout_2);
+
+        LoginButton = new QPushButton(groupBox);
+        LoginButton->setObjectName(QString::fromUtf8("LoginButton"));
+
+        verticalLayout->addWidget(LoginButton);
+
+        SeedPhraseButton = new QPushButton(groupBox);
+        SeedPhraseButton->setObjectName(QString::fromUtf8("SeedPhraseButton"));
+
+        verticalLayout->addWidget(SeedPhraseButton);
+
         stackedWidget->addWidget(page);
         page_2 = new QWidget();
         page_2->setObjectName(QString::fromUtf8("page_2"));
@@ -58,6 +113,11 @@ public:
     {
         Inbox->setWindowTitle(QCoreApplication::translate("Inbox", "Dialog", nullptr));
         pushButton->setText(QCoreApplication::translate("Inbox", "New Email", nullptr));
+        groupBox->setTitle(QCoreApplication::translate("Inbox", "Sign in", nullptr));
+        WalletIDLabel->setText(QCoreApplication::translate("Inbox", "Wallet ID:", nullptr));
+        PasswordLabel->setText(QCoreApplication::translate("Inbox", "Password:", nullptr));
+        LoginButton->setText(QCoreApplication::translate("Inbox", "Login", nullptr));
+        SeedPhraseButton->setText(QCoreApplication::translate("Inbox", "Seed Phrase", nullptr));
     } // retranslateUi
 
 };
