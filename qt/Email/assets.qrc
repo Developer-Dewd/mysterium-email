@@ -1,2 +1,13 @@
-<!DOCTYPE RCC>
-<RCC version="1.0"/>
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>resources/audio/sfx_bong1.mp3</file>
+        <file>resources/audio/sfx_bong2.mp3</file>
+        <file>resources/audio/sfx_click1.mp3</file>
+        <file>resources/audio/sfx_click2.mp3</file>
+        <file>resources/audio/sfx_click3.mp3</file>
+        <file>resources/audio/sfx_click4.mp3</file>
+        <file>resources/img/email.png</file>
+        <file>resources/img/mysterium.png</file>
+        <file>resources/img/mysterium-small.png</file>
+    </qresource>
+</RCC>
