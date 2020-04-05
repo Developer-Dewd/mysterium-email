@@ -84,6 +84,7 @@ public:
 
         PasswordLineEdit = new QLineEdit(groupBox);
         PasswordLineEdit->setObjectName(QString::fromUtf8("PasswordLineEdit"));
+        PasswordLineEdit->setEchoMode(QLineEdit::Password);
 
         horizontalLayout_2->addWidget(PasswordLineEdit);
 

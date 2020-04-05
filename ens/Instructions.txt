@@ -1,0 +1,4 @@
+1) Register for ens
+2) Setup resolver
+3) Link an Address to your registered domain
+4) Setup reverse name lookup
