@@ -39,6 +39,7 @@ public:
     QLineEdit *PasswordLineEdit;
     QPushButton *LoginButton;
     QPushButton *SeedPhraseButton;
+    QPushButton *pushButton_2;
     QWidget *page_2;
 
     void setupUi(QDialog *Inbox)
@@ -99,6 +100,9 @@ public:
 
         verticalLayout->addWidget(SeedPhraseButton);
 
+        pushButton_2 = new QPushButton(page);
+        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+        pushButton_2->setGeometry(QRect(290, 380, 93, 28));
         stackedWidget->addWidget(page);
         page_2 = new QWidget();
         page_2->setObjectName(QString::fromUtf8("page_2"));
@@ -118,6 +122,7 @@ public:
         PasswordLabel->setText(QCoreApplication::translate("Inbox", "Password:", nullptr));
         LoginButton->setText(QCoreApplication::translate("Inbox", "Login", nullptr));
         SeedPhraseButton->setText(QCoreApplication::translate("Inbox", "Seed Phrase", nullptr));
+        pushButton_2->setText(QCoreApplication::translate("Inbox", "PushButton", nullptr));
     } // retranslateUi
 
 };

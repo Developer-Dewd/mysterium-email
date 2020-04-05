@@ -16,17 +16,20 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    app.cpp \
     email.cpp \
     inbox.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
+    app.h \
     email.h \
     inbox.h \
     mainwindow.h
 
 FORMS += \
+    app.ui \
     email.ui \
     inbox.ui \
     mainwindow.ui

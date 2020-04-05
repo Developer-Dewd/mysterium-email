@@ -1,6 +1,8 @@
 #include "inbox.h"
 #include "ui_inbox.h"
 #include "email.h"
+#include "app.h"
+#include "app.h"
 #include "QMessageBox"
 #include "QDebug"
 
@@ -27,16 +29,22 @@ void Inbox::on_pushButton_clicked()
 
 void Inbox::on_LoginButton_clicked()
 {
-    QString walletid = ui->WalletIDLabel->text();
+    QString walletid = ui->WalletIDLineEdit->text();
     QString password = ui->PasswordLineEdit->text();
 
     if(walletid == "test" && password == "test"){
         QMessageBox::information(this, "Login","CORRECT");
+        this->close();
+        App appDialog;
+        appDialog.setModal(true);
+        appDialog.exec();
         qDebug() << walletid;
-        //qDebug() << password;
-
+        qDebug() << password;
     }else{
         QMessageBox::information(this, "Login","WRONG walletid or password");
+        qDebug() << walletid;
+        qDebug() << password;
     }
 
 }
+
