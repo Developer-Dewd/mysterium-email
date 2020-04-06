@@ -1,0 +1,10 @@
+release/app.o
+release/email.o
+release/inbox.o
+release/main.o
+release/mainwindow.o
+release/qrc_assets.o
+release/moc_app.o
+release/moc_email.o
+release/moc_inbox.o
+release/moc_mainwindow.o

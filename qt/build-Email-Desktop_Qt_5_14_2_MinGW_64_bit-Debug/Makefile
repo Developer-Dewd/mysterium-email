@@ -252,7 +252,8 @@ Makefile: ../Email/Email.pro C:/Qt-Designer/5.14.2/mingw73_64/mkspecs/win32-g++/
 		C:/Qt-Designer/5.14.2/mingw73_64/lib/Qt5Gui.prl \
 		C:/Qt-Designer/5.14.2/mingw73_64/lib/Qt5Core.prl \
 		C:/Qt-Designer/5.14.2/mingw73_64/lib/qtmain.prl \
-		C:/Qt-Designer/5.14.2/mingw73_64/mkspecs/features/build_pass.prf
+		C:/Qt-Designer/5.14.2/mingw73_64/mkspecs/features/build_pass.prf \
+		../Email/assets.qrc
 	$(QMAKE) -o Makefile ..\Email\Email.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 C:/Qt-Designer/5.14.2/mingw73_64/mkspecs/features/spec_pre.prf:
 C:/Qt-Designer/5.14.2/mingw73_64/mkspecs/qdevice.pri:
@@ -437,6 +438,7 @@ C:/Qt-Designer/5.14.2/mingw73_64/lib/Qt5Gui.prl:
 C:/Qt-Designer/5.14.2/mingw73_64/lib/Qt5Core.prl:
 C:/Qt-Designer/5.14.2/mingw73_64/lib/qtmain.prl:
 C:/Qt-Designer/5.14.2/mingw73_64/mkspecs/features/build_pass.prf:
+../Email/assets.qrc:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ..\Email\Email.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 

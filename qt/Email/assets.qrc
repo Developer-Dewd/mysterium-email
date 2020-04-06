@@ -1,5 +1,5 @@
 <RCC>
-    <qresource prefix="/new/prefix1">
+    <qresource prefix="/q">
         <file>resources/audio/sfx_bong1.mp3</file>
         <file>resources/audio/sfx_bong2.mp3</file>
         <file>resources/audio/sfx_click1.mp3</file>

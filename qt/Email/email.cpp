@@ -25,8 +25,8 @@ Email::~Email()
 
 void Email::on_SendButton_clicked()
 {
-    //string testmsg = "Are you ready to send you email? \nsize: 47KB cost: 00.34 MYST";//string won't work as message param
-    QMessageBox::StandardButton reply = QMessageBox::question(this, "Save Draft", "Are you ready to send you email? \nSIZE: 47KB COST: 00.34 MYST", QMessageBox::Yes | QMessageBox::No);
+    QString testmsg = "Are you ready to send you email? \nsize: 47KB cost: 00.34 MYST";//string won't work as message param
+    QMessageBox::StandardButton reply = QMessageBox::question(this, "Save Draft", testmsg, QMessageBox::Yes | QMessageBox::No);
     if(reply == QMessageBox::Yes){
         //TODO: Smart contract, Mysterium proxy
         ui->label->setText("Email Sent!");

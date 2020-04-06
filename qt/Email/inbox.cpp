@@ -33,7 +33,7 @@ void Inbox::on_LoginButton_clicked()
     QString password = ui->PasswordLineEdit->text();
 
     if(walletid == "test" && password == "test"){
-        QMessageBox::information(this, "Login","CORRECT");
+        //QMessageBox::information(this, "Login","CORRECT");
         this->close();
         App appDialog;
         appDialog.setModal(true);
