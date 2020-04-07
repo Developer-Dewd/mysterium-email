@@ -1,5 +1,5 @@
 # mysterium-email
-<img src="assets/banner.png" height="300" width="300">
+<img src="assets/banner.png" height="300" width="400">
 Email client for windows
 
 ## Installation 
