@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "QTimer"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -17,8 +18,10 @@ public:
 
 private slots:
     void on_pushButton_clicked();
+    void load_app();
 
 private:
     Ui::MainWindow *ui; //Object to access widgets
+    QTimer *timer;
 };
 #endif // MAINWINDOW_H

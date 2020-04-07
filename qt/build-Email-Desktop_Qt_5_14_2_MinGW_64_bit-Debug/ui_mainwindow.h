@@ -14,7 +14,6 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
-#include <QtWidgets/QProgressBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
@@ -26,7 +25,6 @@ class Ui_MainWindow
 public:
     QWidget *centralwidget;
     QLabel *TopRightLogo;
-    QProgressBar *progressBar;
     QLabel *TRLText;
     QLabel *MainTitle;
     QLabel *label;
@@ -49,10 +47,6 @@ public:
         TopRightLogo->setPixmap(QPixmap(QString::fromUtf8("../../assets/mysterium-small.png")));
         TopRightLogo->setScaledContents(false);
         TopRightLogo->setWordWrap(false);
-        progressBar = new QProgressBar(centralwidget);
-        progressBar->setObjectName(QString::fromUtf8("progressBar"));
-        progressBar->setGeometry(QRect(330, 410, 118, 23));
-        progressBar->setValue(24);
         TRLText = new QLabel(centralwidget);
         TRLText->setObjectName(QString::fromUtf8("TRLText"));
         TRLText->setGeometry(QRect(170, 40, 131, 41));
@@ -75,6 +69,7 @@ public:
         label->setFont(font2);
         pushButton = new QPushButton(centralwidget);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setEnabled(true);
         pushButton->setGeometry(QRect(530, 490, 93, 28));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
@@ -86,7 +81,6 @@ public:
         MainWindow->setStatusBar(statusbar);
 
         retranslateUi(MainWindow);
-        QObject::connect(progressBar, SIGNAL(valueChanged(int)), progressBar, SLOT(setValue(int)));
 
         QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi

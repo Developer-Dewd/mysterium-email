@@ -10,9 +10,9 @@ App::App(QWidget *parent) :
     ui->setupUi(this);
 
     //Populate the list view with
-    foreach(QString reqs, reqlist.get()){
-       ui->InboxListWidget->addItem(reqs.getURLPath());
-    }
+//    foreach(QString reqs, reqlist.get()){
+//       ui->InboxListWidget->addItem(reqs.getURLPath());
+//    }
 
     //Placeholders
     ui->InboxListWidget->addItem(new QListWidgetItem(QIcon(":q/resources/img/email.png"),"@0x53f3422 \nSubject Hello World!"));
