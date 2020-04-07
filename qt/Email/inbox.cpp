@@ -2,15 +2,23 @@
 #include "ui_inbox.h"
 #include "email.h"
 #include "app.h"
-#include "app.h"
+#include "inboxwindow.h"
 #include "QMessageBox"
 #include "QDebug"
+#include "QToolBar"
 
 Inbox::Inbox(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Inbox)
 {
     ui->setupUi(this);
+    //QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    //QToolBar *menubar = new QToolBar();
+    //mainLayout->addWidget(menubar);
+    //slljd
+    //QAction *action1 = new QAction("Add",menubar);
+    //parent->layout()->setMenuBar(menubar);
+
 }
 
 Inbox::~Inbox()
@@ -34,10 +42,13 @@ void Inbox::on_LoginButton_clicked()
 
     if(walletid == "test" && password == "test"){
         //QMessageBox::information(this, "Login","CORRECT");
-        this->close();
-        App appDialog;
-        appDialog.setModal(true);
-        appDialog.exec();
+        InboxWindow inbox;
+        inbox.show();
+        this->hide();
+//        this->close();
+//        App appDialog;
+//        appDialog.setModal(true);
+//        appDialog.exec();
         qDebug() << walletid;
         qDebug() << password;
     }else{

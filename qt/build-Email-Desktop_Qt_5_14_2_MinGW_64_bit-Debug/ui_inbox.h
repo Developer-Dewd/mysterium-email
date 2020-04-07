@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
+#include <QtWidgets/QFrame>
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
@@ -39,6 +40,8 @@ public:
     QLineEdit *PasswordLineEdit;
     QPushButton *LoginButton;
     QPushButton *SeedPhraseButton;
+    QFrame *line;
+    QPushButton *pushButton_3;
     QPushButton *pushButton_2;
     QWidget *page_2;
 
@@ -101,6 +104,18 @@ public:
 
         verticalLayout->addWidget(SeedPhraseButton);
 
+        line = new QFrame(groupBox);
+        line->setObjectName(QString::fromUtf8("line"));
+        line->setFrameShape(QFrame::HLine);
+        line->setFrameShadow(QFrame::Sunken);
+
+        verticalLayout->addWidget(line);
+
+        pushButton_3 = new QPushButton(groupBox);
+        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
+
+        verticalLayout->addWidget(pushButton_3);
+
         pushButton_2 = new QPushButton(page);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
         pushButton_2->setGeometry(QRect(290, 380, 93, 28));
@@ -123,6 +138,7 @@ public:
         PasswordLabel->setText(QCoreApplication::translate("Inbox", "Password:", nullptr));
         LoginButton->setText(QCoreApplication::translate("Inbox", "Login", nullptr));
         SeedPhraseButton->setText(QCoreApplication::translate("Inbox", "Seed Phrase", nullptr));
+        pushButton_3->setText(QCoreApplication::translate("Inbox", "Create Account", nullptr));
         pushButton_2->setText(QCoreApplication::translate("Inbox", "PushButton", nullptr));
     } // retranslateUi
 

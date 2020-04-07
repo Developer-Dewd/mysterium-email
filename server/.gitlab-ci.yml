@@ -1,0 +1,25 @@
+stages:
+  - build
+  - publish
+
+image:
+  name: node:lts-alpine
+before_script:
+  - yarn
+
+build:
+  stage: build
+  tags: [docker]
+  script: yarn ci
+  artifacts:
+    paths:
+      - lib/
+
+publish-npm:
+  stage: publish
+  only:
+    - tags
+  tags: [docker]
+  script:
+    - npm config set '//registry.npmjs.org/:_authToken' "${NPM_PUBLISH_TOKEN}"
+    - npm publish --access public

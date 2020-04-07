@@ -19,6 +19,7 @@ SOURCES += \
     app.cpp \
     email.cpp \
     inbox.cpp \
+    inboxwindow.cpp \
     main.cpp \
     mainwindow.cpp
 
@@ -26,12 +27,14 @@ HEADERS += \
     app.h \
     email.h \
     inbox.h \
+    inboxwindow.h \
     mainwindow.h
 
 FORMS += \
     app.ui \
     email.ui \
     inbox.ui \
+    inboxwindow.ui \
     mainwindow.ui
 
 # Default rules for deployment.

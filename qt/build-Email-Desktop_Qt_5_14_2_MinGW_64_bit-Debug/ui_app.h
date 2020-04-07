@@ -53,6 +53,7 @@ public:
     void retranslateUi(QDialog *App)
     {
         App->setWindowTitle(QCoreApplication::translate("App", "Dialog", nullptr));
+        plainTextEdit->setPlainText(QString());
         label->setText(QCoreApplication::translate("App", "Hi, Username!", nullptr));
         pushButton->setText(QCoreApplication::translate("App", "+", nullptr));
     } // retranslateUi
