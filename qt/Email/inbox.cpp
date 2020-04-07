@@ -40,12 +40,11 @@ void Inbox::on_LoginButton_clicked()
     QString walletid = ui->WalletIDLineEdit->text();
     QString password = ui->PasswordLineEdit->text();
 
-    if(walletid == "test" && password == "test"){
+    if(walletid == "mysteriumuser.eth" && password == "test1234"){
         //QMessageBox::information(this, "Login","CORRECT");
-        InboxWindow inbox;
-        inbox.show();
-        this->hide();
-//        this->close();
+        InboxWindow *inbox = new InboxWindow();
+        inbox->show();
+        this->close();
 //        App appDialog;
 //        appDialog.setModal(true);
 //        appDialog.exec();
