@@ -10,7 +10,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);//Opens the window
     timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(load_app()));
-    timer->start(5000);
+    timer->setSingleShot(true);
+    timer->start(3000);
 }
 
 MainWindow::~MainWindow()

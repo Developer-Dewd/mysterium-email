@@ -120,6 +120,7 @@ public:
         SendButton->setText(QCoreApplication::translate("Email", "Send", nullptr));
         SaveDraftButton->setText(QCoreApplication::translate("Email", "Save Draft", nullptr));
         label->setText(QString());
+        FromInput->setText(QCoreApplication::translate("Email", "mysteriumuser.eth", nullptr));
         To->setText(QCoreApplication::translate("Email", "To:", nullptr));
         From->setText(QCoreApplication::translate("Email", "From:", nullptr));
         Subject->setText(QCoreApplication::translate("Email", "Subject:", nullptr));

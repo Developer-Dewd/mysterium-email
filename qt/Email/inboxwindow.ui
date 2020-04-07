@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>930</width>
+    <width>931</width>
     <height>600</height>
    </rect>
   </property>
@@ -14,17 +14,79 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <widget class="QPlainTextEdit" name="plainTextEdit">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>70</y>
+      <width>651</width>
+      <height>481</height>
+     </rect>
+    </property>
+    <property name="plainText">
+     <string/>
+    </property>
+   </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>130</x>
-      <y>230</y>
-      <width>55</width>
-      <height>16</height>
+      <x>360</x>
+      <y>20</y>
+      <width>221</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Hello, mysteriumuser.eth</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="InboxListWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>70</y>
+      <width>281</width>
+      <height>481</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>20</y>
+      <width>93</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="text">
-     <string>dlids;l</string>
+     <string>+</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>20</y>
+      <width>211</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Balance: 2000 &lt;span style=&quot; font-weight:600; color:#aa00ff;&quot;&gt;MYST&lt;/span&gt; (&lt;span style=&quot; font-weight:600;&quot;&gt;$1.00)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
   </widget>
@@ -33,15 +95,17 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>930</width>
+     <width>931</width>
      <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuemail_settings">
     <property name="title">
-     <string>email settings</string>
+     <string>Email settings</string>
     </property>
+    <addaction name="actionWallet"/>
     <addaction name="actionens"/>
+    <addaction name="actionDrafts"/>
    </widget>
    <widget class="QMenu" name="menuEdit">
     <property name="title">
@@ -54,7 +118,17 @@
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionens">
    <property name="text">
-    <string>ens domain</string>
+    <string>ENS Domain</string>
+   </property>
+  </action>
+  <action name="actionDrafts">
+   <property name="text">
+    <string>Drafts</string>
+   </property>
+  </action>
+  <action name="actionWallet">
+   <property name="text">
+    <string>Wallet</string>
    </property>
   </action>
  </widget>

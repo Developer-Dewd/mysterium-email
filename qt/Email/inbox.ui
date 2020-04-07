@@ -23,26 +23,13 @@
     </rect>
    </property>
    <widget class="QWidget" name="page">
-    <widget class="QPushButton" name="pushButton">
-     <property name="geometry">
-      <rect>
-       <x>790</x>
-       <y>510</y>
-       <width>121</width>
-       <height>101</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>New Email</string>
-     </property>
-    </widget>
     <widget class="QGroupBox" name="groupBox">
      <property name="geometry">
       <rect>
        <x>230</x>
        <y>120</y>
        <width>321</width>
-       <height>191</height>
+       <height>231</height>
       </rect>
      </property>
      <property name="title">
@@ -103,26 +90,13 @@
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_3">
+       <widget class="QPushButton" name="CreateAccountButton">
         <property name="text">
          <string>Create Account</string>
         </property>
        </widget>
       </item>
      </layout>
-    </widget>
-    <widget class="QPushButton" name="pushButton_2">
-     <property name="geometry">
-      <rect>
-       <x>290</x>
-       <y>380</y>
-       <width>93</width>
-       <height>28</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>PushButton</string>
-     </property>
     </widget>
    </widget>
    <widget class="QWidget" name="page_2"/>

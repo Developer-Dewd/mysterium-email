@@ -1,12 +1,12 @@
-debug/app.o
 debug/email.o
 debug/inbox.o
 debug/inboxwindow.o
 debug/main.o
 debug/mainwindow.o
+debug/recover.o
 debug/qrc_assets.o
-debug/moc_app.o
 debug/moc_email.o
 debug/moc_inbox.o
 debug/moc_inboxwindow.o
 debug/moc_mainwindow.o
+debug/moc_recover.o

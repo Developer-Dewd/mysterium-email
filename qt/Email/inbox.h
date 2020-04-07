@@ -20,6 +20,10 @@ private slots:
 
     void on_LoginButton_clicked();
 
+    void on_CreateAccountButton_clicked();
+
+    void on_SeedPhraseButton_clicked();
+
 private:
     Ui::Inbox *ui;
 };

@@ -6,6 +6,10 @@
 #include "QMessageBox"
 #include "QDebug"
 #include "QToolBar"
+#include "QDesktopServices"
+#include "QString"
+#include "QUrl"
+#include "recover.h"
 
 Inbox::Inbox(QWidget *parent) :
     QDialog(parent),
@@ -58,3 +62,16 @@ void Inbox::on_LoginButton_clicked()
 
 }
 
+
+void Inbox::on_CreateAccountButton_clicked()
+{
+    QString link = "https://wallet.mysterium.network/instructions/wallet";
+    QDesktopServices::openUrl(QUrl(link));
+}
+
+void Inbox::on_SeedPhraseButton_clicked()
+{
+    Recover seedPhrase;
+    seedPhrase.setModal(true);
+    seedPhrase.exec();
+}

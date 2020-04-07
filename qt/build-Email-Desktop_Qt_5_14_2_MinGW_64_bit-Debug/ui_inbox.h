@@ -29,7 +29,6 @@ class Ui_Inbox
 public:
     QStackedWidget *stackedWidget;
     QWidget *page;
-    QPushButton *pushButton;
     QGroupBox *groupBox;
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout;
@@ -41,8 +40,7 @@ public:
     QPushButton *LoginButton;
     QPushButton *SeedPhraseButton;
     QFrame *line;
-    QPushButton *pushButton_3;
-    QPushButton *pushButton_2;
+    QPushButton *CreateAccountButton;
     QWidget *page_2;
 
     void setupUi(QDialog *Inbox)
@@ -55,12 +53,9 @@ public:
         stackedWidget->setGeometry(QRect(20, 10, 921, 621));
         page = new QWidget();
         page->setObjectName(QString::fromUtf8("page"));
-        pushButton = new QPushButton(page);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(790, 510, 121, 101));
         groupBox = new QGroupBox(page);
         groupBox->setObjectName(QString::fromUtf8("groupBox"));
-        groupBox->setGeometry(QRect(230, 120, 321, 191));
+        groupBox->setGeometry(QRect(230, 120, 321, 231));
         verticalLayout = new QVBoxLayout(groupBox);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         horizontalLayout = new QHBoxLayout();
@@ -111,14 +106,11 @@ public:
 
         verticalLayout->addWidget(line);
 
-        pushButton_3 = new QPushButton(groupBox);
-        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
+        CreateAccountButton = new QPushButton(groupBox);
+        CreateAccountButton->setObjectName(QString::fromUtf8("CreateAccountButton"));
 
-        verticalLayout->addWidget(pushButton_3);
+        verticalLayout->addWidget(CreateAccountButton);
 
-        pushButton_2 = new QPushButton(page);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setGeometry(QRect(290, 380, 93, 28));
         stackedWidget->addWidget(page);
         page_2 = new QWidget();
         page_2->setObjectName(QString::fromUtf8("page_2"));
@@ -132,14 +124,12 @@ public:
     void retranslateUi(QDialog *Inbox)
     {
         Inbox->setWindowTitle(QCoreApplication::translate("Inbox", "Dialog", nullptr));
-        pushButton->setText(QCoreApplication::translate("Inbox", "New Email", nullptr));
         groupBox->setTitle(QCoreApplication::translate("Inbox", "Sign in", nullptr));
         WalletIDLabel->setText(QCoreApplication::translate("Inbox", "Wallet ID:", nullptr));
         PasswordLabel->setText(QCoreApplication::translate("Inbox", "Password:", nullptr));
         LoginButton->setText(QCoreApplication::translate("Inbox", "Login", nullptr));
         SeedPhraseButton->setText(QCoreApplication::translate("Inbox", "Seed Phrase", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("Inbox", "Create Account", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("Inbox", "PushButton", nullptr));
+        CreateAccountButton->setText(QCoreApplication::translate("Inbox", "Create Account", nullptr));
     } // retranslateUi
 
 };

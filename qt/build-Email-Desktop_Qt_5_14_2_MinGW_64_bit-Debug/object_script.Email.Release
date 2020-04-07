@@ -1,12 +1,12 @@
-release/app.o
 release/email.o
 release/inbox.o
 release/inboxwindow.o
 release/main.o
 release/mainwindow.o
+release/recover.o
 release/qrc_assets.o
-release/moc_app.o
 release/moc_email.o
 release/moc_inbox.o
 release/moc_inboxwindow.o
 release/moc_mainwindow.o
+release/moc_recover.o

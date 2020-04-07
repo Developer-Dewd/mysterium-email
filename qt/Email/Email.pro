@@ -16,26 +16,26 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    app.cpp \
     email.cpp \
     inbox.cpp \
     inboxwindow.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    recover.cpp
 
 HEADERS += \
-    app.h \
     email.h \
     inbox.h \
     inboxwindow.h \
-    mainwindow.h
+    mainwindow.h \
+    recover.h
 
 FORMS += \
-    app.ui \
     email.ui \
     inbox.ui \
     inboxwindow.ui \
-    mainwindow.ui
+    mainwindow.ui \
+    recover.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

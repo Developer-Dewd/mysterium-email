@@ -89,7 +89,11 @@
      <widget class="QLineEdit" name="ToInput"/>
     </item>
     <item>
-     <widget class="QLineEdit" name="FromInput"/>
+     <widget class="QLineEdit" name="FromInput">
+      <property name="text">
+       <string>mysteriumuser.eth</string>
+      </property>
+     </widget>
     </item>
     <item>
      <widget class="QLineEdit" name="SubjectInput"/>
