@@ -1,5 +1,5 @@
 # Mysterium Secure Email
-<img src="assets/banner.png" height="300" width="500">
+<img src="assets/banner.png" height="500" width="700">
 Email client for windows
 
 ## Installation 
