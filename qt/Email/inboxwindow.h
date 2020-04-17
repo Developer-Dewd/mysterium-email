@@ -20,6 +20,12 @@ private slots:
     void on_pushButton_clicked();
 
 
+    void on_pushButton_2_clicked();
+
+    void on_plainTextEdit_textChanged();
+
+    void on_InboxListWidget_itemClicked(QListWidgetItem *item);
+
 private:
     Ui::InboxWindow *ui;
 };

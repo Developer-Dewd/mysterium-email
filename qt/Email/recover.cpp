@@ -12,3 +12,8 @@ Recover::~Recover()
 {
     delete ui;
 }
+
+void Recover::on_pushButton_clicked()
+{
+    this->close();
+}
