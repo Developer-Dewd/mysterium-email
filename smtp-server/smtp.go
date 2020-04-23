@@ -3,20 +3,22 @@ package main
 import (
 	"fmt"
 	"html"
+	"io/ioutil"
 	"log"
 	"net/http"
 	"net/smtp"
 )
 
 func main() {
-	IOtest()
-	Logtest()
-	Smtptest()
-	startServer()
+	iotest()
+	logtest()
+	//smtptest()
+	//startServer()
+	filetest()
 }
 
 func iotest() {
-	fmt.Println("smtp serve")
+	fmt.Println("smtp server")
 }
 
 func logtest() {
@@ -27,7 +29,8 @@ func smtptest() {
 	hostURL := "smtp.gmail.com"
 	hostPort := "587"
 	sender := "wildun.dwd@gmail.com"
-	reciever := "dvdwd.io@gmail.com"
+	receiver := "dvdwd.io@gmail.com"
+	password := "kfdsd"
 	//authentication
 	auth := smtp.PlainAuth(
 		"",
@@ -35,6 +38,28 @@ func smtptest() {
 		password,
 		hostURL,
 	)
+	//email body
+	email := []byte("To:" + receiver + "\r\n" + "Subject:" + "Hello" + "\r\n" + "How are you doing")
+
+	err := smtp.SendMail(
+		hostURL+":"+hostPort,
+		auth,
+		sender,
+		[]string{receiver},
+		email)
+
+	if err != nil {
+		fmt.Println("Error:", err)
+	}
+	log.Println("Email sent")
+}
+
+func filetest() {
+	body, err := ioutil.ReadFile("password.txt")
+	if err != nil {
+		log.Fatalf("unable to read file: %v", err)
+	}
+	fmt.Println(string(body))
 }
 
 func startServer() {
