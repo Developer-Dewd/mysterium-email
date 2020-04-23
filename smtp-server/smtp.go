@@ -9,12 +9,16 @@ import (
 	"net/smtp"
 )
 
+var (
+	password string = getPassword()
+)
+
 func main() {
 	iotest()
 	logtest()
 	//smtptest()
 	//startServer()
-	filetest()
+	fmt.Println(password)
 }
 
 func iotest() {
@@ -54,12 +58,12 @@ func smtptest() {
 	log.Println("Email sent")
 }
 
-func filetest() {
+func getPassword() string {
 	body, err := ioutil.ReadFile("password.txt")
 	if err != nil {
 		log.Fatalf("unable to read file: %v", err)
 	}
-	fmt.Println(string(body))
+	return string(body)
 }
 
 func startServer() {
