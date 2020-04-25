@@ -14,10 +14,10 @@ var (
 )
 
 func main() {
-	iotest()
-	logtest()
+	// iotest()
+	// logtest()
 	//smtptest()
-	//startServer()
+	startServer()
 	fmt.Println(password)
 }
 
@@ -33,13 +33,13 @@ func smtptest() {
 	hostURL := "smtp.gmail.com"
 	hostPort := "587"
 	sender := "wildun.dwd@gmail.com"
-	receiver := "dvdwd.io@gmail.com"
-	password := "kfdsd"
+	receiver := "wildun.dwd@gmail.com"
+	accountPassword := password
 	//authentication
 	auth := smtp.PlainAuth(
 		"",
 		sender,
-		password,
+		accountPassword,
 		hostURL,
 	)
 	//email body
@@ -69,6 +69,8 @@ func getPassword() string {
 func startServer() {
 	http.HandleFunc("/send", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "Hello, %q", html.EscapeString(r.URL.Path))
+		iotest()
+		logtest()
 	})
 	fmt.Println("Listening on port 8080")
 	log.Fatal(http.ListenAndServe(":8080", nil))
